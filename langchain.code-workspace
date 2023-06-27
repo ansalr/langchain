@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "langchain-tutorials",
+			"path": "langchain-tutorials"
+		}
+	],
+	"settings": {}
+}
