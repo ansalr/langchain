@@ -15,4 +15,10 @@ os.environ["OPENAI_API_KEY"] = "sk-q30fMTEWMyv3z7rMnRWFT3BlbkFJRtrae1BeI4IMNEmly
 
 loader = DirectoryLoader('D:\Download 01\langchain\data\PaulGrahamEssaySmall',glob='**/*.txt')
 document = loader.load()
-print(document)
+text_splitter = CharacterTextSplitter(chunk_size = 1000, chunk_overlap = 0)
+texts = text_splitter.split_documents(document)
+embedding = OpenAIEmbeddings(openai_api_key=os.environ["OPENAI_API_KEY"])
+docsearch = chroma.from_documents(texts,embedding)
+
+
+
