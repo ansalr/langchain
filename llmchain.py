@@ -4,8 +4,11 @@
 # pip install google-search-results
 
 import os
-os.environ["SERPAPI_API_KEY"] = "9ad62748493b99abe25d62d2b3a1b898c5a08f263a2769aa5a84ae70ece3d21e"
-os.environ["OPENAI_API_KEY"] = "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"
+
+serp_api = input("SERPAPI : ")
+openai_api = input("OPENAPI : ")
+os.environ["SERPAPI_API_KEY"] = serp_api
+os.environ["OPENAI_API_KEY"] = openai_api
 
 
 from langchain.agents import load_tools

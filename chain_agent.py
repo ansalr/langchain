@@ -1,6 +1,7 @@
 from langchain import OpenAI, ConversationChain
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+openai_api = input("OPENAPI : ")
+os.environ["OPENAI_API_KEY"] = openai_api
 llm = OpenAI(temperature=0)
 conversation = ConversationChain(llm=llm, verbose=True)
 conversation.predict(input="Hi there!")

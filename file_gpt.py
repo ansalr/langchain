@@ -11,7 +11,8 @@ import magic
 import nltk
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+openai_api = input("OPENAPI : ")
+os.environ["OPENAI_API_KEY"] = openai_api
 
 loader = DirectoryLoader('D:\Download 01\langchain\data\PaulGrahamEssaySmall',glob='**/*.txt')
 document = loader.load()

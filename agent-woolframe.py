@@ -1,9 +1,12 @@
 # pip install wolframalpha
 
 import os
-os.environ["SERPAPI_API_KEY"] = "09e893ba144668563a78ec381a731dd6bee17e703e51729ead944f1c9f19a0a3"
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["WOLFRAM_ALPHA_APPID"] ="56HE7A-KKLKR7XA8L"
+serp_api = input("SERPAPI : ")
+openai_api = input("OPENAPI : ")
+wolfram_api = input("WORLFARM_API : ")
+os.environ["SERPAPI_API_KEY"] = serp_api
+os.environ["OPENAI_API_KEY"] = openai_api
+os.environ["WOLFRAM_ALPHA_APPID"] = wolfram_api
 
 from langchain.agents import load_tools,initialize_agent
 from langchain.llms import OpenAI

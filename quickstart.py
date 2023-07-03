@@ -3,8 +3,8 @@
 
 
 import os 
-os.environ["OPENAI_API_KEY"]= "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"
-
+openai_api = input("OPENAPI : ")
+os.environ["OPENAI_API_KEY"] = openai_api
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 
